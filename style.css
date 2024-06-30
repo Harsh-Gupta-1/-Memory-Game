@@ -1,0 +1,108 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0px;
+    background-color: #ffb900;
+    font-weight: bold;
+}
+
+.start{
+    padding: 10px;
+    font-size: 32px;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor:pointer;
+}
+.start:hover{
+    background-color: rgb(228, 226, 226);
+}
+.invisible{
+    display: none;
+}
+h1{
+    font-size: 40px;
+    color: black;
+}
+.boxes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+.header{
+    margin-left: 250px;
+
+}
+.main{
+    background-color: white;
+    padding: 30px;
+    border: 5px solid black;
+   
+}
+
+.box{
+    background-color:#ffb900 ;
+    padding: 20px;
+    width: 30px;
+    height: 30px;
+    border: 4px solid black;
+    border-radius: 5px;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.8s;
+}
+.box:active{
+    transform: rotateY(180deg);
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.stop{
+    padding: 10px;
+    font-size: 25px;
+    margin: 20px;
+    border: none;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.end{
+    background-color: white;
+    padding: 50px;
+    border-radius: 5px;
+    border: 5px solid black;
+    text-align: center;
+}
+
+.end button{
+    color: white;
+    background-color: black;
+    font-size: 1.5em;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.flip{
+    animation: flipper 2s;
+}
+
+@keyframes flipper {
+    to{
+        transform:rotateY('180deg');
+    }
+}
