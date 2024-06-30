@@ -79,9 +79,8 @@ for(let i=0;i<fruits.length;i++){
                 document.querySelector(".main").classList.add("invisible");
                 clearInterval(timer);
                 endBox.classList.remove("invisible");
-                endBox.lastElementChild.previousElementSibling.textContent +=`${minutes}:${seconds}`;
-                console.log("hi");
-                endBox.firstElementChild.nextElementSibling.textContent +=`${mover}`;
+                endBox.lastElementChild.previousElementSibling.textContent =`Time taken:${minutes}:${seconds}`;
+                endBox.firstElementChild.nextElementSibling.textContent =`Moves taken:${mover}`;
             }
         },500)
     }});
@@ -123,6 +122,8 @@ function playAgain(){
     timers.textContent = "Time: 00:00";
     mover =0;
     counts =0;
+    endBox.lastElementChild.previousElementSibling.textContent =`Time taken:00:00`;
+    endBox.firstElementChild.nextElementSibling.textContent =`Moves taken:0`;
     randomiseArray(fruits);
     for(let i=0;i<16;i++){
         if(flag[i]==1){
